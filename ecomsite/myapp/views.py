@@ -14,10 +14,10 @@ def user_signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')
+            return redirect('myapp:login')
     else:
         form = SignupForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'myapp/signup.html', {'form': form})
 
 # login page
 def user_login(request):
@@ -29,10 +29,10 @@ def user_login(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)    
-                return redirect('home')
+                return redirect('myapp:index')
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'myapp/login.html', {'form': form})
 
 # logout page
 def user_logout(request):
