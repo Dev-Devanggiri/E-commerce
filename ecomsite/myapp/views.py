@@ -29,12 +29,12 @@ def user_login(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)    
-                return redirect('myapp:index')
+                return redirect('shop:index')
     else:
         form = LoginForm()
     return render(request, 'myapp/login.html', {'form': form})
 
-# logout page
+# logout page0
 def user_logout(request):
     logout(request)
-    return redirect('login')
+    return redirect('index')
