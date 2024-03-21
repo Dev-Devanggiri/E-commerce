@@ -115,6 +115,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'accounts:login' %}" class="btn btn-simple">Log in</a></li>
+                    <li><a href="{% url 'accounts:signup' %}" class="btn btn-simple">Sign up</a></li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>
