@@ -20,7 +20,7 @@ from shop import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("",views.index,name="index"),
-     path('myapp/', include('myapp.urls', namespace='myapp')),
+     path('accounts/', include('accounts.urls', namespace='accounts')),
 	# path('', user_view.Login, name ='login'),
     # path('user/', include('user.urls')),
     path("checkout/",views.checkout,name="checkout"),

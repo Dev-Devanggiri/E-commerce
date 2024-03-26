@@ -32,6 +32,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 INSTALLED_APPS = [
     "shop",
+    "accounts",
     # "user.apps.UserConfig",
     "livereload",
     "django.contrib.admin",
@@ -41,7 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'crispy_forms',
-    "myapp",
 ]
 MIDDLEWARE = [
     "livereload.middleware.LiveReloadScript",
